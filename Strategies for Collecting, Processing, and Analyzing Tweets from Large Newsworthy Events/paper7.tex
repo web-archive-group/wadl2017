@@ -1,0 +1,60 @@
+\documentclass[sigconf]{acmart}
+
+\usepackage{booktabs} % For formal tables
+
+
+% Copyright
+%\setcopyright{none}
+%\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+
+% DOI
+%\acmDOI{10.475/123_4}
+
+% ISBN
+%\acmISBN{123-4567-24-567/08/06}
+
+%Conference
+\acmConference[JCDL 2017]{Web Archiving and Digital Libraries 2017}{June 2017}{Toronto, ON} 
+\acmYear{1997}
+\copyrightyear{2017}
+
+
+\begin{document}
+\title{Strategies for Collecting, Processing, and Analyzing Tweets from Large Newsworthy Events}
+
+\author{Nick Ruest}
+\orcid{0000-0003-1891-1112}
+\affiliation{%
+  \institution{York University}
+  \city{Toronto} 
+}
+\email{ruestn@yorku.ca}
+
+
+\keywords{Web archiving, Twitter}
+
+\maketitle
+
+\#WomensMarch, \#Aleppo, \#paris, \#bataclan, \#parisattacks, \#porteouverte, \#jesuischarlie, \#jesuisahmed, \#jesuisjuif, \#charliehebdo, \#panamanpapers, and \#exln42 are all different hashtags, but they share several things in common. They are all large newsworthy events. They are datasets that each contain over a million tweets. Most importantly these collections raise some interesting insights in collecting, processing, and analyzing large newsworthy events\cite{Milligan_etal_JCDL2016}.
+ 
+Collecting tweets from these events can be challenging because of timing. Tweets can be collected from the Filter API\cite{twitter_filter} and Search API\cite{twitter_search}. Both having their own caveats. The Filter API only captures the current Twitter stream, and is limited to collecting up to 1\% of the overall Twitter stream. The Search API allows you to collect more than 1\% of the overall Twitter stream\cite{Driscoll_etal_IJC2014}, but one can only collect up to 18,000 every 15 minutes, and is limited to a 7 day window. Generally, using a strategy of using the Filter and Search API to capture a given event is the best.
+ 
+DocNow's twarc\cite{summers_twarc_2015} includes a number of utilities to process a dataset after collection. These tools allow a researcher, librarian, or archivist to filter their dataset(s) down to what is needed for appraisal, and then accession. Noteworthy tools include; deduplication, source, retweets, date/times, users, and hashtags.
+ 
+DocNow's utilities can be further used to curate related collections. One can extract all the urls of a dataset, unshorten them, and extract the unique urls to use as a seed list for a web crawler to capture websites related to a given event. One can also extract all of the image urls, and download all images associated with a dataset, which then can be used for image analysis\cite{ruest_2016}, presentation, and/or preservation.
+ 
+In conclusion, this presentation will provide an overview of collection strategy, insights from processing and analysis, ensuing web crawls, and image presentation from each collection. 
+
+\section{References}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{paper7} 
+
+\end{document}
