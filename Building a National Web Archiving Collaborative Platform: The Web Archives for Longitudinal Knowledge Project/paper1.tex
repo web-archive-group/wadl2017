@@ -1,0 +1,75 @@
+\documentclass[sigconf]{acmart}
+
+\usepackage{booktabs} % For formal tables
+
+
+% Copyright
+%\setcopyright{none}
+%\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+
+% DOI
+%\acmDOI{10.475/123_4}
+
+% ISBN
+%\acmISBN{123-4567-24-567/08/06}
+
+%Conference
+\acmConference[JCDL 2017]{Web Archiving and Digital Libraries 2017}{June 2017}{Toronto, ON} 
+\acmYear{1997}
+\copyrightyear{2017}
+
+\begin{document}
+\title{Building a National Web Archiving Collaborative Platform: The Web Archives for Longitudinal Knowledge Project}
+
+\author{Ian Milligan}
+\orcid{http://orcid.org/0000-0002-1470-7723}
+\affiliation{%
+  \institution{University of Waterloo}
+  \city{Waterloo}
+}
+\email{i2millig@uwaterloo.ca}
+
+\author{Nick Ruest}
+\orcid{0000-0003-1891-1112}
+\affiliation{%
+  \institution{York University}
+  \city{Toronto} 
+}
+\email{ruestn@yorku.ca}
+
+\author{Ryan Deschamps}
+\affiliation{%
+  \institution{University of Waterloo}
+  \city{Waterloo}
+} 
+\email{ryan.deschamps@uwaterloo.ca}
+
+\keywords{Web archiving, Blacklight, Solr, Canada}
+
+\maketitle
+
+In the absence of a national web archiving strategy, Canadian governments, universities, and cultural heritage institutions have pursued disparate web archival collecting strategies. Carried out generally through contracts with the Internet Archive's Archive-It services, these medium-sized collections amount to a significant portion of Canada's born-digital cultural heritage since 2005. While there has been some collaboration between institutions, notably via the Council of Prairie and Pacific University Libraries in western Canada, most web archiving collecting has been taking place in silos. Researchers seeking to use web archives in Canada are thus limited not only to the Archive-It search portal, but also to exploring on a silo-ed collection-by-collection basis. Given the growing importance of web archives for scholarly research, our project breaks down silos and generate a common search portal and derivative dataset provider.\\
+
+Our Web Archiving for Longitudinal Knowledge (WALK) Project, housed at http://webarchives.ca/and with our main activity via our GitHub repo at https://github.com/web- archive-group/WALK, has been bringing together Canadian partners to integrate web archival collections. Co-directed by a historian and a librarian, the project brings together computer scientists working on the warcbase project, doctoral students working on governance issues, and students running tests and usability improvements. We currently have ~20TB of web archival collections, aggregated from the Universities of Toronto, Alberta, Winnipeg, and Victoria, as well as Dalhousie and Simon Fraser University. Our workflow consists of:
+\begin{itemize}
+  \item Signing Memorandum of Agreements (MOU) with partner institutions;
+  \item Gathering WARCs from partner institutions into ComputeCanada infrastructure through the Research Portals and Projects (RPP) program;
+  \item Using warcbase\footnote{http://warcbase.org} to generate scholarly derivatives, such as domain counts, link graphs, and files that can be loaded into network analysis software\cite{lin_etal_2017};
+  \item Adapting the Blacklight\footnote{http://projectblacklight.org/} front end to serve as a replacement for our current SHINE interface; this will allow built-in APIs, faceted search by institution, and inter-operability with university library catalogues\cite{jackson_etal_2016};
+  \item Using a team of research assistants to describe each collection using Python and R;
+  \item Finally, using multiple correspondence analysis, generating profiles of each web archive with an eye towards assisting curators in finding collection overlap/gaps\cite{Milligan_etal_JCDL2016}.\\
+\end{itemize}
+
+This presentation provides an overview of the WALK project, focusing specifically on questions of interdisciplinary collaboration, workflow, dataset creation and dissemination. As web archiving increasingly happens at the institutional level, the WALK project suggests one way forward towards collaboration, collection development, and researcher access.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{paper1} 
+
+\end{document}
